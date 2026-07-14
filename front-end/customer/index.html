@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lyca AI Customer Service</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="chat-container">
+        <div class="chat-header">
+          <span class="chat-title">💬 Lyca Support</span>
+          <span class="chat-subtitle">Ask about your bill, plan, or roaming</span>
+        </div>
+
+        <div id="chat-log" class="chat-log"></div>
+
+        <div id="typing-indicator" class="typing-indicator hidden">Assistant is typing...</div>
+
+        <div class="chat-input-area">
+          <input id="user-input" placeholder="Type your message..." autocomplete="off" />
+          <button id="send-btn" onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

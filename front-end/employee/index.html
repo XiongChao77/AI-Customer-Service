@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lyca Support - Agent Dashboard</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="dashboard">
+        <div class="header">
+          <h2>📊 Support Queue Dashboard</h2>
+          <div class="header-actions">
+            <span id="status-line" class="status-line">Loading...</span>
+            <button onclick="refreshDashboard()" class="btn">Refresh</button>
+            <button onclick="resetQueue()" class="btn btn-secondary">Reset Demo Queue</button>
+          </div>
+        </div>
+
+        <div class="summary-grid" id="summary-grid"></div>
+
+        <div class="panels">
+          <div class="panel">
+            <h3 class="panel-title">Agent Roster</h3>
+            <div id="agent-table"></div>
+          </div>
+
+          <div class="panel">
+            <h3 class="panel-title">Optimized Assignment Plan (CP-SAT)</h3>
+            <div id="assignment-table"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

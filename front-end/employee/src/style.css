@@ -1,0 +1,159 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+}
+
+#app {
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.dashboard {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-line {
+  font-size: 12px;
+  color: #666;
+}
+
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #1a2b3c;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #0f1c28;
+}
+.btn-secondary {
+  background: white;
+  color: #1a2b3c;
+  border: 1px solid #ccc;
+}
+.btn-secondary:hover {
+  background: #f0f0f0;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.card {
+  background: white;
+  padding: 14px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.card h4 {
+  margin: 0 0 6px 0;
+  font-size: 12px;
+  color: #888;
+  font-weight: 500;
+}
+.card p {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #1a2b3c;
+}
+
+.panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 800px) {
+  .panels {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+}
+
+.panel-title {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th {
+  text-align: left;
+  color: #888;
+  font-weight: 500;
+  padding: 6px 8px;
+  border-bottom: 1px solid #eee;
+}
+
+td {
+  padding: 8px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.pill {
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.pill.idle {
+  background: #e8eaed;
+  color: #666;
+}
+.pill.active {
+  background: #fff3cd;
+  color: #8a6d00;
+}
+.pill.busy {
+  background: #fde0e0;
+  color: #ef5350;
+}
+
+.empty-state {
+  color: #999;
+  font-size: 13px;
+  text-align: center;
+  padding: 20px 0;
+}

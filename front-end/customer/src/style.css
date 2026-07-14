@@ -1,0 +1,152 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.chat-container {
+  width: 420px;
+  height: 640px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-header {
+  background: #1a2b3c;
+  color: white;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.chat-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.chat-subtitle {
+  font-size: 12px;
+  color: #a9b4bf;
+}
+
+.chat-log {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message {
+  max-width: 78%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sender-label {
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.6;
+  padding: 0 4px;
+}
+
+.message-text {
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+.message.user {
+  align-self: flex-end;
+}
+.message.user .sender-label {
+  align-self: flex-end;
+}
+.message.user .message-text {
+  background: #1a2b3c;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.message.bot {
+  align-self: flex-start;
+}
+.message.bot .message-text {
+  background: #e8eaed;
+  color: #1a1a1a;
+  border-bottom-left-radius: 4px;
+}
+
+.message.agent {
+  align-self: flex-start;
+}
+.message.agent .message-text {
+  background: #d4f4dd;
+  color: #16341f;
+  border-bottom-left-radius: 4px;
+}
+.message.agent .sender-label {
+  color: #26a69a;
+}
+
+.typing-indicator {
+  padding: 0 16px 8px 16px;
+  font-size: 12px;
+  color: #888;
+  font-style: italic;
+}
+.typing-indicator.hidden {
+  display: none;
+}
+
+.chat-input-area {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid #eee;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+#user-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
+}
+#user-input:focus {
+  border-color: #1a2b3c;
+}
+
+#send-btn {
+  padding: 10px 20px;
+  background: #1a2b3c;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+#send-btn:hover {
+  background: #0f1c28;
+}
